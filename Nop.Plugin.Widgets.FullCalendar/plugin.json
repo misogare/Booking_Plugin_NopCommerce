@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "FullCalender",
+  "SystemName": "Widgets.FullCalendar",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.50" ],
+  "Author": "mesvak",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.FullCalendar.dll",
+  "Description": "This plugin displays a calendar from Google Calendar on your site"
+}
