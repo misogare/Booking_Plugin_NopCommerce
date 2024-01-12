@@ -158,6 +158,7 @@ namespace Nop.Plugin.Widgets.FullCalendar.Controllers
         [AllowAnonymous]
         [HttpPost]
         [Route("Plugins/Widgets.FullCalendar/PublicInfo")]
+
         public async Task<IActionResult> PublicInfo(PublicInfoModel model)
         {
             if (ModelState.IsValid) // check form inputs

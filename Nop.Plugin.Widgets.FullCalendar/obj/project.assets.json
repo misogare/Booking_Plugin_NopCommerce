@@ -14145,25 +14145,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mesvak\\.nuget\\packages\\": {},
-    "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\aryas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mesvak\\Downloads\\we\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj",
+      "projectUniqueName": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj",
       "projectName": "Nop.Plugin.Widgets.FullCalendar",
-      "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj",
-      "packagesPath": "C:\\Users\\mesvak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mesvak\\Downloads\\we\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\obj\\",
+      "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj",
+      "packagesPath": "C:\\Users\\aryas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\mesvak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aryas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -14179,8 +14177,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj": {
-              "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj"
+            "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web\\Nop.Web.csproj": {
+              "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web\\Nop.Web.csproj"
             }
           }
         }
@@ -14210,7 +14208,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

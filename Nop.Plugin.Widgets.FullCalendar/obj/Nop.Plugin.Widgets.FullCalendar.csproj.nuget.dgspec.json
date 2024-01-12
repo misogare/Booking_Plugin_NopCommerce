@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mesvak\\Downloads\\we\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj": {}
+    "C:\\Users\\aryas\\Downloads\\NopCommerce\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+    "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj": {
       "version": "4.5.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj",
+        "projectUniqueName": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj",
         "projectName": "Nop.Core",
-        "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj",
-        "packagesPath": "C:\\Users\\mesvak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\obj\\",
+        "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj",
+        "packagesPath": "C:\\Users\\aryas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mesvak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aryas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -123,25 +122,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+    "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj": {
       "version": "4.5.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj",
+        "projectUniqueName": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj",
         "projectName": "Nop.Data",
-        "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj",
-        "packagesPath": "C:\\Users\\mesvak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\obj\\",
+        "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj",
+        "packagesPath": "C:\\Users\\aryas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mesvak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aryas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -157,8 +155,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj"
               }
             }
           }
@@ -218,25 +216,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Services\\Nop.Services.csproj": {
+    "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Services\\Nop.Services.csproj": {
       "version": "4.5.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Services\\Nop.Services.csproj",
+        "projectUniqueName": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Services\\Nop.Services.csproj",
         "projectName": "Nop.Services",
-        "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Services\\Nop.Services.csproj",
-        "packagesPath": "C:\\Users\\mesvak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Services\\obj\\",
+        "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Services\\Nop.Services.csproj",
+        "packagesPath": "C:\\Users\\aryas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mesvak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aryas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -252,11 +249,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj"
               },
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj"
               }
             }
           }
@@ -324,25 +321,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mesvak\\Downloads\\we\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj": {
+    "C:\\Users\\aryas\\Downloads\\NopCommerce\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mesvak\\Downloads\\we\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj",
+        "projectUniqueName": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj",
         "projectName": "Nop.Plugin.Widgets.FullCalendar",
-        "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj",
-        "packagesPath": "C:\\Users\\mesvak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mesvak\\Downloads\\we\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\obj\\",
+        "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\Nop.Plugin.Widgets.FullCalendar.csproj",
+        "packagesPath": "C:\\Users\\aryas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Plugins\\Nop.Plugin.Widgets.FullCalendar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mesvak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aryas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -358,8 +354,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web\\Nop.Web.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web\\Nop.Web.csproj"
               }
             }
           }
@@ -389,25 +385,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+    "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
       "version": "4.5.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
+        "projectUniqueName": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
         "projectName": "Nop.Web.Framework",
-        "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
-        "packagesPath": "C:\\Users\\mesvak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web.Framework\\obj\\",
+        "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
+        "packagesPath": "C:\\Users\\aryas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web.Framework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mesvak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aryas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -423,14 +418,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj"
               },
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj"
               },
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Services\\Nop.Services.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Services\\Nop.Services.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Services\\Nop.Services.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Services\\Nop.Services.csproj"
               }
             }
           }
@@ -478,25 +473,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj": {
+    "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web\\Nop.Web.csproj": {
       "version": "4.5.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj",
+        "projectUniqueName": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web\\Nop.Web.csproj",
         "projectName": "Nop.Web",
-        "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj",
-        "packagesPath": "C:\\Users\\mesvak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\obj\\",
+        "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web\\Nop.Web.csproj",
+        "packagesPath": "C:\\Users\\aryas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mesvak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aryas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -512,17 +506,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Core\\Nop.Core.csproj"
               },
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Data\\Nop.Data.csproj"
               },
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Services\\Nop.Services.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Services\\Nop.Services.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Services\\Nop.Services.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Libraries\\Nop.Services\\Nop.Services.csproj"
               },
-              "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
+              "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+                "projectPath": "C:\\Users\\aryas\\Downloads\\NopCommerce\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
               }
             }
           }
@@ -555,7 +549,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

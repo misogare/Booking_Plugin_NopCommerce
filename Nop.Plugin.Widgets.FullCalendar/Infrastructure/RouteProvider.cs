@@ -17,7 +17,8 @@ namespace Nop.Plugin.Widgets.FullCalendar.Infrastructure
                         controller = "FullCalendar",
                         action = "List"
                     });
-           
+            
+
         }
             public int Priority => -1;
         }
