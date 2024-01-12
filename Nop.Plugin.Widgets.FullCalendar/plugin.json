@@ -1,6 +1,6 @@
 ﻿{
   "Group": "Widgets",
-  "FriendlyName": "FullCalender",
+  "FriendlyName": "FullCalendar",
   "SystemName": "Widgets.FullCalendar",
   "Version": "1.00",
   "SupportedVersions": [ "4.50" ],

@@ -47,7 +47,7 @@ namespace Nop.Plugin.Widgets.NivoSlider.Components
 
 
 
-            var model = new AppointmentModel
+            var model = new PublicInfoModel
             {
                 PublicApiKey = fullCalendarSettings.PublicApiKey,
                 CalendarId = fullCalendarSettings.CalendarId,

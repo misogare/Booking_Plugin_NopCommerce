@@ -5,7 +5,6 @@ using Nop.Core.Domain.Messages;
 using Nop.Core.Domain.Stores;
 using Nop.Core.Events;
 using Nop.Data;
-using Nop.Plugin.Widgets.FullCalendar.Data;
 using Nop.Plugin.Widgets.FullCalendar.Domain;
 using Nop.Services.Events;
 using Nop.Services.Localization;
@@ -22,6 +21,7 @@ namespace Nop.Plugin.Widgets.FullCalendar.Services
     {
         private readonly IRepository<Appointment> _newAppointmentRepository;
         private readonly IEventPublisher _eventPublisher;
+        private readonly ILocalizationService _localizationService;
         private readonly IStoreContext _storeContext;
         private readonly IMessageTemplateService _messageTemplateService;
         private readonly IWorkflowMessageService _workflowMessageService;
@@ -40,6 +40,7 @@ namespace Nop.Plugin.Widgets.FullCalendar.Services
             IEmailAccountService emailAccountService,
             EmailAccountSettings emailAccountSettings,
             IWorkContext workContext,
+            ILocalizationService localizationService,
             LocalizationSettings localizationSettings)
         {
             _newAppointmentRepository = newAppointmentRepository;
@@ -51,72 +52,59 @@ namespace Nop.Plugin.Widgets.FullCalendar.Services
             _emailAccountService = emailAccountService;
             _emailAccountSettings = emailAccountSettings;
             _workContext = workContext;
+            _localizationService = localizationService;
             _localizationSettings = localizationSettings;
         }
 
         public virtual async Task InsertAppointment(Appointment appointment)
         {
             await _newAppointmentRepository.InsertAsync(appointment);
-
-            //event notification
             await _eventPublisher.EntityInsertedAsync(appointment);
-
             var currentCustomer = await _workContext.GetCurrentCustomerAsync();
-
-            //tokens
-            var tokens = new List<Token>();
-            tokens.Add(new Token("Appointment.ContactNumber", appointment.ContactNumber));
-            tokens.Add(new Token("Appointment.Date", appointment.AppointmentDateTimeUTC));
-            tokens.Add(new Token("Appointment.Reason", appointment.AppointmentReason));
-
-            SendCustomerAppointmentNotificationMessage(currentCustomer, _localizationSettings.DefaultAdminLanguageId, tokens);
+            await SendCustomerAppointmentNotificationMessage(currentCustomer, _localizationSettings.DefaultAdminLanguageId, appointment);
         }
 
-        /// <summary>
-        /// Sends 'New customer' notification message to a store owner
-        /// </summary>
-        /// <param name="customer">Customer instance</param>
-        /// <param name="languageId">Message language identifier</param>
-        /// <returns>Queued email identifier</returns>
-        public virtual int SendCustomerAppointmentNotificationMessage(Customer customer, int languageId, IList<Token> tokens)
+        public virtual async Task SendCustomerAppointmentNotificationMessage(Customer customer, int languageId, Appointment appointment)
         {
             if (customer == null)
-                throw new ArgumentNullException("customer");
+                throw new ArgumentNullException(nameof(customer));
 
-            var store = _storeContext.CurrentStore;
+            var store = await _storeContext.GetCurrentStoreAsync();
+            var messageTemplates = await _messageTemplateService.GetMessageTemplatesByNameAsync("Appointment.New", store.Id);
+            var messageTemplate = messageTemplates.FirstOrDefault();
 
-            var messageTemplate = _messageTemplateService.GetMessageTemplateByName("Appointment.New", store.Id);
             if (messageTemplate == null)
-                return 0;
+                return;
 
-            //email account
-            var emailAccount = GetEmailAccountOfMessageTemplate(messageTemplate, languageId);
+            var emailAccount = await GetEmailAccountOfMessageTemplateAsync(messageTemplate, languageId);
+            var tokens = new List<Token>();
+            await _messageTokenProvider.AddStoreTokensAsync(tokens, store, emailAccount);
+           await  _messageTokenProvider.AddCustomerTokensAsync(tokens, customer);
+            // Add appointment specific tokens here
+            tokens.Add(new Token("Appointment.ContactNumber", appointment.ContactNumber));
+            tokens.Add(new Token("Appointment.Date", appointment.AppointmentDateTimeUTC.ToString("D")));
+            tokens.Add(new Token("Appointment.Reason", appointment.AppointmentReason));
 
-            _messageTokenProvider.AddStoreTokens(tokens, store, emailAccount);
-            _messageTokenProvider.AddCustomerTokens(tokens, customer);
-            
-
-            //event notification
-            _eventPublisher.MessageTokensAdded(messageTemplate, tokens);
+            await _eventPublisher.MessageTokensAddedAsync(messageTemplate, tokens);
 
             var toEmail = emailAccount.Email;
             var toName = emailAccount.DisplayName;
-
-            return _workflowMessageService.SendNotification(messageTemplate, emailAccount, languageId, tokens, toEmail, toName);
+            await _workflowMessageService.SendNotificationAsync(messageTemplate, emailAccount, languageId, tokens, toEmail, toName);
         }
 
-        protected virtual EmailAccount GetEmailAccountOfMessageTemplate(MessageTemplate messageTemplate, int languageId)
+        protected virtual async Task<EmailAccount> GetEmailAccountOfMessageTemplateAsync(MessageTemplate messageTemplate, int languageId)
         {
-            var emailAccountId = messageTemplate.GetLocalized(mt => mt.EmailAccountId, languageId);
-            //some 0 validation (for localizable "Email account" dropdownlist which saves 0 if "Standard" value is chosen)
+            var emailAccountId = await _localizationService.GetLocalizedAsync(messageTemplate, mt => mt.EmailAccountId, languageId);
             if (emailAccountId == 0)
                 emailAccountId = messageTemplate.EmailAccountId;
 
-            var emailAccount = _emailAccountService.GetEmailAccountById(emailAccountId);
+            var emailAccount = await _emailAccountService.GetEmailAccountByIdAsync(emailAccountId)
+                ?? await _emailAccountService.GetEmailAccountByIdAsync(_emailAccountSettings.DefaultEmailAccountId)
+                ?? (await _emailAccountService.GetAllEmailAccountsAsync()).FirstOrDefault();
+
             if (emailAccount == null)
-                emailAccount = _emailAccountService.GetEmailAccountById(_emailAccountSettings.DefaultEmailAccountId);
-            if (emailAccount == null)
-                emailAccount = _emailAccountService.GetAllEmailAccounts().FirstOrDefault();
+                throw new Exception("No email account could be loaded");
+
             return emailAccount;
         }
 

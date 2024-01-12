@@ -358,15 +358,6 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Core\\Nop.Core.csproj"
-              },
-              "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Libraries\\Nop.Data\\Nop.Data.csproj"
-              },
-              "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
-                "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
-              },
               "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj": {
                 "projectPath": "C:\\Users\\mesvak\\Downloads\\we\\Presentation\\Nop.Web\\Nop.Web.csproj"
               }

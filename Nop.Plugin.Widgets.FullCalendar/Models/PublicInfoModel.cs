@@ -11,7 +11,7 @@ using Nop.Web.Framework.Mvc.ModelBinding;
 
 namespace Nop.Plugin.Widgets.FullCalendar.Models
 {
-    public record AppointmentModel : BaseNopModel
+    public record PublicInfoModel : BaseNopModel
     {
         [NopResourceDisplayName("Plugins.Widgets.FullCalendar.Form.AppointmentDate")]
         public DateTime AppointmentDate { get; set; }

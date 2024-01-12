@@ -11,232 +11,249 @@
 
     //active menu item (system name)
     NopHtml.SetActiveMenuItemSystemName("Full Calendar Settings");
-    NopHtml.AddScriptParts(ResourceLocation.Auto,"~/Plugins/Widgets.FullCalendar/Scripts/moment.min.js");
-    NopHtml.AddScriptParts(ResourceLocation.Auto, "~/Plugins/Widgets.FullCalendar/Scripts/bootstrap.min.js");
-    NopHtml.AddScriptParts(ResourceLocation.Auto, "~/Plugins/Widgets.FullCalendar/Scripts/winmarkltd-BootstrapFormHelpers-d4201db/bootstrap-formhelpers.min.js");
-    NopHtml.AddScriptParts(ResourceLocation.Auto, "~/Plugins/Widgets.FullCalendar/Scripts/winmarkltd-BootstrapFormHelpers-d4201db/bootstrap-formhelpers-phone.js");
-    NopHtml.AddScriptParts(ResourceLocation.Auto, "~/Plugins/Widgets.FullCalendar/Scripts/fullcalendar/fullcalendar.min.js");
-    NopHtml.AddScriptParts(ResourceLocation.Auto, "~/Plugins/Widgets.FullCalendar/Scripts/fullcalendar/gcal.min.js");
+    <script src="~/Plugins/Widgets.FullCalendar/Scripts/moment.min.js"></script>
+
+    <!-- Include Bootstrap JavaScript -->
+    <script src="~/Plugins/Widgets.FullCalendar/Scripts/bootstrap.min.js"></script>
+
+    <!-- Include Bootstrap Form Helpers JavaScript -->
+    <script src="~/Plugins/Widgets.FullCalendar/Scripts/winmarkltd-BootstrapFormHelpers-d4201db/bootstrap-formhelpers.min.js"></script>
+    <script src="~/Plugins/Widgets.FullCalendar/Scripts/winmarkltd-BootstrapFormHelpers-d4201db/bootstrap-formhelpers-phone.js"></script>
+
+    <!-- Include FullCalendar JavaScript -->
+    <script src="~/Plugins/Widgets.FullCalendar/Scripts/fullcalendar/fullcalendar.min.js"></script>
+    <script src="~/Plugins/Widgets.FullCalendar/Scripts/fullcalendar/gcal.min.js"></script>
+
+    <!-- Include Bootstrap Datetimepicker JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-    NopHtml.AddCssFileParts("~/Plugins/Widgets.FullCalendar/Content/bootstrap.min.css");
-    NopHtml.AddCssFileParts("~/Plugins/Widgets.FullCalendar/Content/fullcalendar/fullcalendar.min.css");
-    NopHtml.AddCssFileParts("~/Plugins/Widgets.FullCalendar/Content/fontAwesome/css/font-awesome-4.6.3.min.css");
-    NopHtml.AddCssFileParts("~/Plugins/Widgets.FullCalendar/Content/winmarkltd-BootstrapFormHelpers-d4201db/bootstrap-formhelpers.min.css");
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" asp-append-version="true" />
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Plugins/Widgets.FullCalendar/Content/bootstrap.min.css" />
+
+    <!-- Include FullCalendar CSS -->
+    <link rel="stylesheet" href="~/Plugins/Widgets.FullCalendar/Content/fullcalendar/fullcalendar.min.css" />
+
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="~/Plugins/Widgets.FullCalendar/Content/fontAwesome/css/font-awesome-4.6.3.min.css" />
+
+    <!-- Include Bootstrap Form Helpers CSS -->
+    <link rel="stylesheet" href="~/Plugins/Widgets.FullCalendar/Content/winmarkltd-BootstrapFormHelpers-d4201db/bootstrap-formhelpers.min.css" />
+
+    <!-- Include Bootstrap Datetimepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
 }
+<form asp-controller="WidgetsFullCalendar" asp-action="Configure" method="post">
+@Html.AntiForgeryToken()
 
-<form asp-controller="WidgetsFullCalendarControllerr" asp-action="Configure" method="post">
-    @Html.AntiForgeryToken()
-
-    <div id="ordersettings-edit" class="nav-tabs-custom">
-        <ul class="nav nav-tabs">
-            <li class="active">
-                <a href="#tab-settings" data-toggle="tab">@T("Admin.Configuration.Settings")</a>
-            </li>
-            <li>
-                <a href="#tab-appointments" data-toggle="tab">@T("Admin.Common.List")</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane active" id="tab-settings">
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            @T("Plugins.Widgets.FullCalendar.Config.Google.Header")
+<div id="ordersettings-edit" class="nav-tabs-custom">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#tab-settings" data-toggle="tab">@T("Admin.Configuration.Settings")</a>
+        </li>
+        <li>
+            <a href="#tab-appointments" data-toggle="tab">@T("Admin.Common.List")</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-settings">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        @T("Plugins.Widgets.FullCalendar.Config.Google.Header")
+                    </div>
+                    <div class="panel-body">
+                        <div class="setup-instructions">
+                            @T("Plugins.Widgets.FullCalendar.Instructions")
                         </div>
-                        <div class="panel-body">
-                            <div class="setup-instructions">
-                                @T("Plugins.Widgets.FullCalendar.Instructions")
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label asp-for="CalendarId"></label>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-3">
-                                    <label asp-for="CalendarId"></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input asp-for="CalendarId" class="form-control" />
-                                    <span asp-validation-for="CalendarId" class="text-danger"></span>
-                                </div>
+                            <div class="col-md-9">
+                                <input asp-for="CalendarId" class="form-control" />
+                                <span asp-validation-for="CalendarId" class="text-danger"></span>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-3">
-                                    <label asp-for="ClassName"></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input asp-for="ClassName" class="form-control" />
-                                    <span asp-validation-for="ClassName" class="text-danger"></span>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label asp-for="ClassName"></label>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-3">
-                                    <label asp-for="PublicApiKey"></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input asp-for="PublicApiKey" class="form-control" />
-                                    <span asp-validation-for="PublicApiKey" class="text-danger"></span>
-                                </div>
+                            <div class="col-md-9">
+                                <input asp-for="ClassName" class="form-control" />
+                                <span asp-validation-for="ClassName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label asp-for="PublicApiKey"></label>
+                            </div>
+                            <div class="col-md-9">
+                                <input asp-for="PublicApiKey" class="form-control" />
+                                <span asp-validation-for="PublicApiKey" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            @T("Plugins.Widgets.FullCalendar.Config.DaysOfWeek.Header")
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        @T("Plugins.Widgets.FullCalendar.Config.DaysOfWeek.Header")
+                    </div>
+                    <div class="panel-body">
+                        <div class="setup-instructions">
+                            <p>@T("Plugins.Widgets.FullCalendar.Config.DaysOfWeek.Instructions")</p>
                         </div>
-                        <div class="panel-body">
-                            <div class="setup-instructions">
-                                <p>@T("Plugins.Widgets.FullCalendar.Config.DaysOfWeek.Instructions")</p>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label asp-for="DaysOfWeekEnabled"></label>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-3">
-                                    <label asp-for="DaysOfWeekEnabled"></label>
-                                </div>
-                                <div class="col-md-9">
-                                    @{
-                                        var days = new List<string> { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-                                        for (var i = 0; i < 7; i++)
-                                        {
-                                            <span class="checkbox">
-                                                <input type="checkbox"
-                                                       asp-for="DaysOfWeekEnabled"
-                                                       value="@i"
-                                                @(Model.DaysOfWeekEnabled.Contains(i) ? "checked" : "")>
-                                                @days[i]
-                                            </span>
-                                        }
+                            <div class="col-md-9">
+                                @{
+                                    var days = new List<string> { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+                                    @for (var i = 0; i < 7; i++)
+                                    {
+                                        <span class="checkbox">
+                                            <input type="checkbox"
+                                                   name="DaysOfWeekEnabled"
+                                                   value="@i"
+                                            @(Model.DaysOfWeekEnabled.Contains(i) ? "checked=\"checked\"" : "") />
+                                            @days[i]
+                                        </span>
                                     }
-                                    <span asp-validation-for="DaysOfWeekEnabled" class="text-danger"></span>
-                                </div>
+
+                                }
+                                <span asp-validation-for="DaysOfWeekEnabled" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        @T("Plugins.Widgets.FullCalendar.Config.Hours.Header")
+                    </div>
+                    <div class="panel-body">
+                        <div class="setup-instructions">
+                            <p>@T("Plugins.Widgets.FullCalendar.Config.Hours.Instructions")</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <label asp-for="StartTime">Start Time</label>
+                                <div id='starttime-datetimepicker'>
+                                    <input asp-for="StartTime" class="form-control hidden" onkeydown="return false" />
+                                    <span asp-validation-for="StartTime" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <label asp-for="EndTime">End Time</label>
+                                <div id='endtime-datetimepicker'>
+                                    <input asp-for="EndTime" class="form-control hidden" onkeydown="return false" />
+                                    <span asp-validation-for="EndTime" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <script>
+                                $(function () {
+                                    const startTime = moment('@Model.StartTime.ToString()', ['hh:mm:ss']);
+                                    const endTime = moment('@Model.EndTime.ToString()', ['hh:mm:ss']);
+                                    $('#starttime-datetimepicker').datetimepicker({
+                                        format: 'HH:mm',
+                                        defaultDate: startTime || new Date(),
+                                        inline: true,
+                                    });
+                                    $('#endtime-datetimepicker').datetimepicker({
+                                        format: 'HH:mm',
+                                        defaultDate: endTime || new Date(),
+                                        inline: true,
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body text-right">
+                        <button type="submit" name="save" class="btn bg-blue">
+                            <i class="fa fa-floppy-o"></i>
+                            @T("Admin.Common.Save")
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+                
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            @T("Plugins.Widgets.FullCalendar.Config.Hours.Header")
+                            @T("Plugins.Widgets.FullCalendar.Config.AppointmentList.Header")
                         </div>
                         <div class="panel-body">
-                            <div class="setup-instructions">
-                                <p>@T("Plugins.Widgets.FullCalendar.Config.Hours.Instructions")</p>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-3 col-sm-6 text-center">
-                                    <label asp-for="StartTime">Start Time</label>
-                                    <div id='starttime-datetimepicker'>
-                                        <input asp-for="StartTime" class="form-control hidden" onkeydown="return false" />
-                                        <span asp-validation-for="StartTime" class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 text-center">
-                                    <label asp-for="EndTime">End Time</label>
-                                    <div id='endtime-datetimepicker'>
-                                        <input asp-for="EndTime" class="form-control hidden" onkeydown="return false" />
-                                        <span asp-validation-for="EndTime" class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <script>
-                                    $(function () {
-                                        const startTime = moment('@Model.StartTime.ToString()', ['hh:mm:ss']);
-                                        const endTime = moment('@Model.EndTime.ToString()', ['hh:mm:ss']);
-                                        $('#starttime-datetimepicker').datetimepicker({
-                                            format: 'HH:mm',
-                                            defaultDate: startTime || new Date(),
-                                            inline: true,
-                                        });
-                                        $('#endtime-datetimepicker').datetimepicker({
-                                            format: 'HH:mm',
-                                            defaultDate: endTime || new Date(),
-                                            inline: true,
-                                        });
-                                    });
-                                </script>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-body text-right">
-                            <button type="submit" name="save" class="btn bg-blue">
-                                <i class="fa fa-floppy-o"></i>
-                                @T("Admin.Common.Save")
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            <div class="tab-pane" id="tab-appointments">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                @T("Plugins.Widgets.FullCalendar.Config.AppointmentList.Header")
-                            </div>
-                            <div class="panel-body">
-                                <div id="appointments-grid"></div>
-                                <script>
-                                    $(document).ready(function () {
-                                        $("#appointments-grid").kendoGrid({
-                                            dataSource: {
-                                                type: "json",
-                                                transport: {
-                                                    read: {
-                                                        url: '@Url.Action("List", "WidgetsFullCalendar")',
-                                                        type: "POST",
-                                                        dataType: "json",
-                                                        data: function () {
-                                                            return { '__RequestVerificationToken': $('input[name=__RequestVerificationToken]').val() };
-                                                        }
-                                                    },
+                            <div id="appointments-grid"></div>
+                            <script>
+                                $(document).ready(function () {
+                                    $("#appointments-grid").kendoGrid({
+                                        dataSource: {
+                                            type: "json",
+                                            transport: {
+                                                read: {
+                                                    url: '@Url.Action("List", "WidgetsFullCalendar")',
+                                                    type: "POST",
+                                                    dataType: "json",
+                                                    data: function () {
+                                                        return { '__RequestVerificationToken': $('input[name=__RequestVerificationToken]').val() };
+                                                    }
                                                 },
-                                                schema: {
-                                                    data: "Data",
-                                                    total: "Total",
-                                                    errors: "Errors"
-                                                },
-                                                error: function (e) {
-                                                    display_kendoui_grid_error(e);
-                                                    // Cancel the changes
-                                                    this.cancelChanges();
-                                                },
-                                                serverPaging: true,
-                                                serverFiltering: true,
-                                                serverSorting: true
                                             },
-                                            pageable: {
-                                                refresh: true,
-                                                numeric: false,
-                                                previousNext: false,
-                                                info: false,
-                                                messages: {
-                                                    display: "@T("Admin.Common.GridPager.Display")",
-                                                    empty: "@T("Admin.Common.GridPager.NoData")"
-                                                }
+                                            schema: {
+                                                data: "Data",
+                                                total: "Total",
+                                                errors: "Errors"
                                             },
-                                            scrollable: false,
-                                            columns: [
-                                                {
-                                                    field: "ContactName",
-                                                    title: "@T("Plugins.Widgets.FullCalendar.Form.ContactName")"
-                                                }, {
-                                                    field: "ContactNumber",
-                                                    title: "@T("Plugins.Widgets.FullCalendar.Form.ContactNumber")",
-                                                }, {
-                                                    field: "AppointmentReason",
-                                                    title: "@T("Plugins.Widgets.FullCalendar.Form.AppointmentReason")",
-                                                }, {
-                                                    field: "AppointmentDate",
-                                                    title: "@T("Plugins.Widgets.FullCalendar.Form.AppointmentDate")",
-                                                    type: "date",
-                                                    format: "{0:G}"
-                                                }, {
-                                                    field: "Created",
-                                                    title: "@T("Plugins.Widgets.FullCalendar.Config.CreatedOn")",
-                                                    type: "date",
-                                                    format: "{0:G}"
-                                                },
-                                            ]
-                                        });
+                                            error: function (e) {
+                                                display_kendoui_grid_error(e);
+                                                // Cancel the changes
+                                                this.cancelChanges();
+                                            },
+                                            serverPaging: true,
+                                            serverFiltering: true,
+                                            serverSorting: true
+                                        },
+                                        pageable: {
+                                            refresh: true,
+                                            numeric: false,
+                                            previousNext: false,
+                                            info: false,
+                                            messages: {
+                                                display: "@T("Admin.Common.GridPager.Display")",
+                                                empty: "@T("Admin.Common.GridPager.NoData")"
+                                            }
+                                        },
+                                        scrollable: false,
+                                        columns: [
+                                            {
+                                                field: "ContactName",
+                                                title: "@T("Plugins.Widgets.FullCalendar.Form.ContactName")"
+                                            }, {
+                                                field: "ContactNumber",
+                                                title: "@T("Plugins.Widgets.FullCalendar.Form.ContactNumber")",
+                                            }, {
+                                                field: "AppointmentReason",
+                                                title: "@T("Plugins.Widgets.FullCalendar.Form.AppointmentReason")",
+                                            }, {
+                                                field: "AppointmentDate",
+                                                title: "@T("Plugins.Widgets.FullCalendar.Form.AppointmentDate")",
+                                                type: "date",
+                                                format: "{0:G}"
+                                            }, {
+                                                field: "Created",
+                                                title: "@T("Plugins.Widgets.FullCalendar.Config.CreatedOn")",
+                                                type: "date",
+                                                format: "{0:G}"
+                                            },
+                                        ]
                                     });
-                                </script>
-                            </div>
+                                });
+                            </script>
                         </div>
-                    </div>
+                
 
-                </div>
+            </div>
         </div>
     </div>
-</form>
+    </form>

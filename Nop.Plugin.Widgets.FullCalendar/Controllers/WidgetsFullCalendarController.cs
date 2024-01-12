@@ -23,9 +23,13 @@ using Microsoft.AspNetCore.Mvc;
 using Nop.Services.Security;
 using System.Threading.Tasks;
 using Nop.Services.Messages;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Nop.Plugin.Widgets.FullCalendar.Controllers
 {
+    [AuthorizeAdmin]
+    [Area(AreaNames.Admin)]
+    [AutoValidateAntiforgeryToken]
     public class WidgetsFullCalendarController : BasePluginController
     {
         private readonly IWorkContext _workContext;
@@ -76,7 +80,6 @@ namespace Nop.Plugin.Widgets.FullCalendar.Controllers
             this._permissionService = permissionService;
             this._notificationService = notificationService;
         }
-
         [AuthorizeAdmin]
         public async Task<IActionResult> Configure()
         {
@@ -109,14 +112,13 @@ namespace Nop.Plugin.Widgets.FullCalendar.Controllers
 
                 // Add other settings checks
             }
-
+           
             return View("~/Plugins/Widgets.FullCalendar/Views/Configure.cshtml", model);
         }
 
 
-       
         [HttpPost]
-        [AuthorizeAdmin]
+        
         public async Task<IActionResult> Configure(ConfigurationModel model)
         {
             if (!await _permissionService.AuthorizeAsync(StandardPermissionProvider.ManageWidgets))
@@ -153,9 +155,10 @@ namespace Nop.Plugin.Widgets.FullCalendar.Controllers
             return await Configure();
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> PublicInfo(AppointmentModel model)
+        [Route("Plugins/Widgets.FullCalendar/PublicInfo")]
+        public async Task<IActionResult> PublicInfo(PublicInfoModel model)
         {
             if (ModelState.IsValid) // check form inputs
             {
@@ -171,7 +174,7 @@ namespace Nop.Plugin.Widgets.FullCalendar.Controllers
                     };
 
                     // create new appointment
-                    _appointmentService.InsertAppointment(appointment);
+                    await _appointmentService.InsertAppointment(appointment);
 
                     // log result for debugging
                     var logMessage = $"New appointment created on {model.AppointmentDate} for {model.ContactNumber}";
@@ -202,15 +205,14 @@ namespace Nop.Plugin.Widgets.FullCalendar.Controllers
 
             return View("~/Plugins/Widgets.FullCalendar/Views/PublicInfo.cshtml", model);
         }
-
-        [AuthorizeAdmin]
         [HttpPost]
+        [Route("Plugins/Widgets.FullCalendar/List")]
         public virtual async Task<IActionResult> List()
         {
             if (!await _permissionService.AuthorizeAsync(StandardPermissionProvider.ManageWidgets))
                 return AccessDeniedView();
             var appointments = await _appointmentService.GetAllAppointments(true);
-            var data = appointments.SelectAwait(async x => new AppointmentModel
+            var data = appointments.SelectAwait(async x => new PublicInfoModel
             {
                 AppointmentDate = await _dateTimeHelper.ConvertToUserTimeAsync(x.AppointmentDateTimeUTC, DateTimeKind.Utc),
                 AppointmentReason = x.AppointmentReason,

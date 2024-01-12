@@ -14,38 +14,447 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Content\bootstrap-datetimepicker\bootstrap-datetimepicker.css" />
+    <None Remove="Content\bootstrap-datetimepicker\bootstrap-datetimepicker.min.css" />
+    <None Remove="Content\bootstrap.min.css" />
+    <None Remove="Content\bootstrap\alerts.less" />
+    <None Remove="Content\bootstrap\badges.less" />
+    <None Remove="Content\bootstrap\bootstrap.less" />
+    <None Remove="Content\bootstrap\breadcrumbs.less" />
+    <None Remove="Content\bootstrap\button-groups.less" />
+    <None Remove="Content\bootstrap\buttons.less" />
+    <None Remove="Content\bootstrap\carousel.less" />
+    <None Remove="Content\bootstrap\close.less" />
+    <None Remove="Content\bootstrap\code.less" />
+    <None Remove="Content\bootstrap\component-animations.less" />
+    <None Remove="Content\bootstrap\dropdowns.less" />
+    <None Remove="Content\bootstrap\forms.less" />
+    <None Remove="Content\bootstrap\glyphicons.less" />
+    <None Remove="Content\bootstrap\grid.less" />
+    <None Remove="Content\bootstrap\input-groups.less" />
+    <None Remove="Content\bootstrap\jumbotron.less" />
+    <None Remove="Content\bootstrap\labels.less" />
+    <None Remove="Content\bootstrap\list-group.less" />
+    <None Remove="Content\bootstrap\media.less" />
+    <None Remove="Content\bootstrap\mixins.less" />
+    <None Remove="Content\bootstrap\mixins\alerts.less" />
+    <None Remove="Content\bootstrap\mixins\background-variant.less" />
+    <None Remove="Content\bootstrap\mixins\border-radius.less" />
+    <None Remove="Content\bootstrap\mixins\buttons.less" />
+    <None Remove="Content\bootstrap\mixins\center-block.less" />
+    <None Remove="Content\bootstrap\mixins\clearfix.less" />
+    <None Remove="Content\bootstrap\mixins\forms.less" />
+    <None Remove="Content\bootstrap\mixins\gradients.less" />
+    <None Remove="Content\bootstrap\mixins\grid-framework.less" />
+    <None Remove="Content\bootstrap\mixins\grid.less" />
+    <None Remove="Content\bootstrap\mixins\hide-text.less" />
+    <None Remove="Content\bootstrap\mixins\image.less" />
+    <None Remove="Content\bootstrap\mixins\labels.less" />
+    <None Remove="Content\bootstrap\mixins\list-group.less" />
+    <None Remove="Content\bootstrap\mixins\nav-divider.less" />
+    <None Remove="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <None Remove="Content\bootstrap\mixins\opacity.less" />
+    <None Remove="Content\bootstrap\mixins\pagination.less" />
+    <None Remove="Content\bootstrap\mixins\panels.less" />
+    <None Remove="Content\bootstrap\mixins\progress-bar.less" />
+    <None Remove="Content\bootstrap\mixins\reset-filter.less" />
+    <None Remove="Content\bootstrap\mixins\reset-text.less" />
+    <None Remove="Content\bootstrap\mixins\resize.less" />
+    <None Remove="Content\bootstrap\mixins\responsive-visibility.less" />
+    <None Remove="Content\bootstrap\mixins\size.less" />
+    <None Remove="Content\bootstrap\mixins\tab-focus.less" />
+    <None Remove="Content\bootstrap\mixins\table-row.less" />
+    <None Remove="Content\bootstrap\mixins\text-emphasis.less" />
+    <None Remove="Content\bootstrap\mixins\text-overflow.less" />
+    <None Remove="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <None Remove="Content\bootstrap\modals.less" />
+    <None Remove="Content\bootstrap\navbar.less" />
+    <None Remove="Content\bootstrap\navs.less" />
+    <None Remove="Content\bootstrap\normalize.less" />
+    <None Remove="Content\bootstrap\pager.less" />
+    <None Remove="Content\bootstrap\pagination.less" />
+    <None Remove="Content\bootstrap\panels.less" />
+    <None Remove="Content\bootstrap\popovers.less" />
+    <None Remove="Content\bootstrap\print.less" />
+    <None Remove="Content\bootstrap\progress-bars.less" />
+    <None Remove="Content\bootstrap\responsive-embed.less" />
+    <None Remove="Content\bootstrap\responsive-utilities.less" />
+    <None Remove="Content\bootstrap\scaffolding.less" />
+    <None Remove="Content\bootstrap\tables.less" />
+    <None Remove="Content\bootstrap\theme.less" />
+    <None Remove="Content\bootstrap\thumbnails.less" />
+    <None Remove="Content\bootstrap\tooltip.less" />
+    <None Remove="Content\bootstrap\type.less" />
+    <None Remove="Content\bootstrap\utilities.less" />
+    <None Remove="Content\bootstrap\variables.less" />
+    <None Remove="Content\bootstrap\wells.less" />
+    <None Remove="Content\fontAwesome\css\font-awesome-4.6.3.css" />
+    <None Remove="Content\fontAwesome\css\font-awesome-4.6.3.min.css" />
+    <None Remove="Content\fontAwesome\fonts\fontawesome-webfont.eot" />
+    <None Remove="Content\fontAwesome\fonts\fontawesome-webfont.svg" />
+    <None Remove="Content\fontAwesome\fonts\fontawesome-webfont.ttf" />
+    <None Remove="Content\fontAwesome\fonts\fontawesome-webfont.woff" />
+    <None Remove="Content\fontAwesome\fonts\fontawesome-webfont.woff2" />
+    <None Remove="Content\fontAwesome\fonts\FontAwesome.otf" />
+    <None Remove="Content\fullcalendar\fullcalendar.css" />
+    <None Remove="Content\fullcalendar\fullcalendar.min.css" />
+    <None Remove="Content\fullcalendar\fullcalendar.print.css" />
+    <None Remove="Content\fullcalendar\fullcalendar.print.min.css" />
+    <None Remove="Content\fullcalendar\scheduler.min.css" />
+    <None Remove="Content\Site.css" />
+    <None Remove="Content\winmarkltd-BootstrapFormHelpers-d4201db\bootstrap-formhelpers.min.css" />
+    <None Remove="logo.jpg" />
     <None Remove="plugin.json" />
+    <None Remove="Scripts\bootstrap-datetimepicker\bootstrap-datetimepicker.js" />
+    <None Remove="Scripts\bootstrap-datetimepicker\bootstrap-datetimepicker.min.js" />
+    <None Remove="Scripts\bootstrap.min.js" />
+    <None Remove="Scripts\fullcalendar\fullcalendar.js" />
+    <None Remove="Scripts\fullcalendar\fullcalendar.min.js" />
+    <None Remove="Scripts\fullcalendar\gcal.js" />
+    <None Remove="Scripts\fullcalendar\gcal.min.js" />
+    <None Remove="Scripts\fullcalendar\locale-all.js" />
+    <None Remove="Scripts\fullcalendar\scheduler.min.js" />
+    <None Remove="Scripts\index.js" />
+    <None Remove="Scripts\jquery.min.js" />
+    <None Remove="Scripts\jquery.validate.min.js" />
+    <None Remove="Scripts\moment.min.js" />
+    <None Remove="Views\Configure.cshtml" />
+    <None Remove="Views\PublicInfo.cshtml" />
     <None Remove="Views\_ViewImports.cshtml" />
   </ItemGroup>
   <ItemGroup>
-      <ProjectReference Include="..\..\Libraries\Nop.Core\Nop.Core.csproj">
-        <Private>false</Private>
-      </ProjectReference>
-      <ProjectReference Include="..\..\Libraries\Nop.Data\Nop.Data.csproj">
-        <Private>false</Private>
-      </ProjectReference>
       <ProjectReference Include="..\..\Presentation\Nop.Web\Nop.Web.csproj">
         <Private>false</Private>
       </ProjectReference>
-    <ProjectReference Include="..\..\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj" />
-    <ClearPluginAssemblies Include="$(MSBuildProjectDirectory)\..\..\Build\ClearPluginAssemblies.csproj" />
+    <ClearPluginAssemblies Include="$(MSBuildProjectDirectory)\..\..\Build\ClearPluginAssemblies.proj" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker\bootstrap-datetimepicker.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap-datetimepicker\bootstrap-datetimepicker.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\alerts.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\badges.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\bootstrap.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\breadcrumbs.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\button-groups.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\buttons.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\carousel.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\close.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\code.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\component-animations.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\dropdowns.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\forms.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\glyphicons.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\grid.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\input-groups.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\jumbotron.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\labels.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\list-group.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\media.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\alerts.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\background-variant.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\border-radius.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\buttons.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\center-block.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\clearfix.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\forms.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\gradients.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\grid-framework.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\grid.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\hide-text.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\image.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\labels.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\list-group.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\nav-divider.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\opacity.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\pagination.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\panels.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\progress-bar.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\reset-filter.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\reset-text.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\resize.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\size.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\tab-focus.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\table-row.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\text-overflow.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\modals.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\navbar.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\navs.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\normalize.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\pager.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\pagination.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\panels.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\popovers.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\print.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\progress-bars.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\responsive-embed.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\responsive-utilities.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\scaffolding.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\tables.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\theme.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\thumbnails.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\tooltip.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\type.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\utilities.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\variables.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bootstrap\wells.less">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fontAwesome\css\font-awesome-4.6.3.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fontAwesome\css\font-awesome-4.6.3.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fontAwesome\fonts\fontawesome-webfont.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fontAwesome\fonts\fontawesome-webfont.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fontAwesome\fonts\fontawesome-webfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fontAwesome\fonts\fontawesome-webfont.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fontAwesome\fonts\fontawesome-webfont.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fontAwesome\fonts\FontAwesome.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fullcalendar\fullcalendar.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fullcalendar\fullcalendar.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fullcalendar\fullcalendar.print.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fullcalendar\fullcalendar.print.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fullcalendar\scheduler.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Site.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\winmarkltd-BootstrapFormHelpers-d4201db\bootstrap-formhelpers.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker\bootstrap-datetimepicker.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker\bootstrap-datetimepicker.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\bootstrap.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\fullcalendar\fullcalendar.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\fullcalendar\fullcalendar.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\fullcalendar\gcal.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\fullcalendar\gcal.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\fullcalendar\locale-all.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\fullcalendar\scheduler.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\index.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.validate.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\moment.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Configure.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\PublicInfo.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\_ViewImports.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="FluentValidation">
-      <HintPath>..\..\..\dog\packages\FluentValidation.6.4.0\lib\Net45\FluentValidation.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <!-- This target execute after "Build" target -->
   <Target Name="NopTarget" AfterTargets="Build">
     <!-- Delete unnecessary libraries from plugins path -->
-    <MSBuild Projects="@(ClearPluginAssemblies)" Properties="PluginPath=$(MSBuildProjectDirectory)\ $(OutDir)" Targets="NopClear" />
+      <MSBuild Projects="@(ClearPluginAssemblies)" Properties="PluginPath=$(MSBuildProjectDirectory)\$(OutDir)" Targets="NopClear" />
+
   </Target>
 </Project>
