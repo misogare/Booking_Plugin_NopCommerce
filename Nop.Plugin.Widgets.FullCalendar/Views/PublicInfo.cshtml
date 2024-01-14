@@ -25,7 +25,7 @@
         }
     </style>
     <script>
-        $(function () {
+        $(document).ready(function () {
             // mvc FullCalendarIndexModel to json
             const model = @Html.Raw(Json.Serialize(Model));
             $("#new-appointment-modal").appendTo("body");
@@ -143,49 +143,28 @@
             });
 
             $('#calendar').fullCalendar('option', 'themeSystem', "bootstrap3");
+            $('form').on('submit', function (event) {
+                event.preventDefault(); // prevent the form from submitting normally
 
-            $(".is-complete").change(function () {
-
-                
-
-                let AppointmentDate = $(this).data("AppointmentDate");
-                let AppointmentReason = $(this).data("AppointmentReason");
-                let ContactName = $(this).data("ContactName");
-                let ContactNumber = $(this).data("ContactNumber");
-
-                console.log($(this).data("AppointmentDate"));
-
+                var formData = $(this).serialize(); // get the form data
+                console.log($(this).data("formData"));
                 $.ajax({
-                    type: "POST",
-                    url: '/WidgetsFullCalendar/PublicInfo',
-                    data: {
-                        AppointmentDate: AppointmentDate, // Use a colon here
-                        AppointmentReason: AppointmentReason, // and here
-                        ContactName: ContactName, // and here
-                        ContactNumber: ContactNumber, // and here
-                    },
-                    headers: {
-                        "RequestVerificationToken":
-                            $('input:hidden[name="__RequestVerificationToken"]').val()
-                    },
+                    url: '/Admin/WidgetsFullCalendar/PublicInfo',
+                    type: 'POST',
+                    data: formData,
                     success: function (response) {
-
+                        // handle the response from the server
                     },
-                    failure: function (response) {
-                        alert(JSON.stringify(response));
-                        $(this).prop("checked", !isChecked);
-
-                    },
-                    error: function (response) {
-                        alert(JSON.stringify(response));
-                        $(this).prop("checked", !isChecked);
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        // handle any errors
                     }
                 });
-
             });
+            
         });
     </script>
 }
+
 
 
 <div class="product-grid">
@@ -243,7 +222,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">@T("Admin.Common.Cancel")</button>
-                            <button type="submit" class="btn btn-primary is-complete">@T("Admin.Common.Save")</button>
+                            <button type="submit" class="btn btn-primary">@T("Admin.Common.Save")</button>
                         </div>
                     </div>
                 </div>

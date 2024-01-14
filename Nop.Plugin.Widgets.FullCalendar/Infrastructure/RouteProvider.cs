@@ -11,16 +11,12 @@ namespace Nop.Plugin.Widgets.FullCalendar.Infrastructure
         public void RegisterRoutes(IEndpointRouteBuilder endpointRouteBuilder)
         {
             //PDT
-            endpointRouteBuilder.MapControllerRoute("Plugin.Widgets.FullCalendar.List", "Plugins/WidgetsFullCalendar/List",
-                    new
-                    {
-                        controller = "FullCalendar",
-                        action = "List"
-                    });
-            
+         
+           
+
 
         }
-            public int Priority => -1;
+        public int Priority => -1;
         }
     
 }

@@ -157,7 +157,6 @@ namespace Nop.Plugin.Widgets.FullCalendar.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        [Route("Plugins/Widgets.FullCalendar/PublicInfo")]
 
         public async Task<IActionResult> PublicInfo(PublicInfoModel model)
         {
@@ -207,23 +206,34 @@ namespace Nop.Plugin.Widgets.FullCalendar.Controllers
             return View("~/Plugins/Widgets.FullCalendar/Views/PublicInfo.cshtml", model);
         }
         [HttpPost]
-        [Route("Plugins/Widgets.FullCalendar/List")]
         public virtual async Task<IActionResult> List()
         {
-            if (!await _permissionService.AuthorizeAsync(StandardPermissionProvider.ManageWidgets))
-                return AccessDeniedView();
-            var appointments = await _appointmentService.GetAllAppointments(true);
-            var data = appointments.SelectAwait(async x => new PublicInfoModel
+            try
             {
-                AppointmentDate = await _dateTimeHelper.ConvertToUserTimeAsync(x.AppointmentDateTimeUTC, DateTimeKind.Utc),
-                AppointmentReason = x.AppointmentReason,
-                ContactName = x.ContactName,
-                ContactNumber = x.ContactNumber,
-                Created = await _dateTimeHelper.ConvertToUserTimeAsync(x.CreatedOnUTC, DateTimeKind.Utc),
-            });
+                if (!await _permissionService.AuthorizeAsync(StandardPermissionProvider.ManageWidgets))
+                    return AccessDeniedView();
 
-            return Json(new { data = data });
+                var appointments = await _appointmentService.GetAllAppointments(true);
+                var data = await appointments.SelectAwait(async x => new PublicInfoModel
+                {
+                    AppointmentDate = await _dateTimeHelper.ConvertToUserTimeAsync(x.AppointmentDateTimeUTC, DateTimeKind.Utc),
+                    AppointmentReason = x.AppointmentReason,
+                    ContactName = x.ContactName,
+                    ContactNumber = x.ContactNumber,
+                    Created = await _dateTimeHelper.ConvertToUserTimeAsync(x.CreatedOnUTC, DateTimeKind.Utc),
+                }).ToListAsync();
+
+                return Json(new { data = data });
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                await _logger.ErrorAsync("Error retrieving appointments", ex);
+                // Handle the error appropriately
+                return StatusCode(500, "Internal Server Error");
+            }
         }
+
 
     }
 }
